@@ -1,6 +1,6 @@
 #!/bin/bash
 #installer Websocker tunneling 
-url="https://raw.githubusercontent.com/Zeadxt/c/main"
+url="https://raw.githubusercontent.com/Zeadxt/x/main"
 cd
 
 #Install Script Websocket-SSH Python
