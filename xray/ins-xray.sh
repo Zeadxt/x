@@ -1,5 +1,5 @@
 #!/bin/bash
-url="https://raw.githubusercontent.com/Zeadxt/c/main"
+url="https://raw.githubusercontent.com/Zeadxt/x/main"
 echo -e "
 "
 date
