@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # ==================================================
-url="https://raw.githubusercontent.com/Zeadxt/c/main"
+url="https://raw.githubusercontent.com/Zeadxt/x/main"
 # etc
 apt dist-upgrade -y
 apt install netfilter-persistent -y
