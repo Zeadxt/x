@@ -58,9 +58,9 @@ cipher="aes-128-gcm"
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#ssws$/a\### '"$user $exp"'\
+sed -i '/#ssws$/a\#ss# '"$user $exp"'\
 },{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#ssgrpc$/a\### '"$user $exp"'\
+sed -i '/#ssgrpc$/a\#ss# '"$user $exp"'\
 },{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
 echo $cipher:$uuid > /tmp/log
 shadowsocks_base64=$(cat /tmp/log)
@@ -290,9 +290,10 @@ END
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e ""
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\\E[0;41;36m        Shadowsocks Account      \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain         : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "Wildcard       : (bug.com).${domain}" | tee -a /etc/log-create-user.log
@@ -304,13 +305,13 @@ echo -e "Ciphers        : ${cipher}" | tee -a /etc/log-create-user.log
 echo -e "Network        : ws/grpc" | tee -a /etc/log-create-user.log
 echo -e "Path           : /ss-ws" | tee -a /etc/log-create-user.log
 echo -e "ServiceName    : ss-grpc" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link TLS       : ${shadowsockslink}" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link none TLS  : ${shadowsockslink1}" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link gRPC      : ${shadowsockslink2}" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
