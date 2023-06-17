@@ -34,6 +34,7 @@ export CYAN='\033[0;36m'
 export LIGHT='\033[0;37m'
 export NC='\033[0m'
 # VPS Information
+UDPCORE="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 #Domain
 domain=$(cat /etc/xray/domain)
 #Status certificate
@@ -104,11 +105,11 @@ echo -e " ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH MENU       
 echo -e " ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}SET AUTO REBOOT $NC"
 echo -e " ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}11${BICyan}]${RED} • ${NC}${CYAN}RESTART ALL SERVICE $NC"
 echo -e " ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}12${BICyan}]${RED} • ${NC}${CYAN}CEK BANDWIDTH $NC"
-echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}INSTALL TCP BBR  $NC"
+echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}13${BICyan}]${RED} • ${NC}${CYAN}INSTALL UDP SERVICE  $NC"
 echo -e " ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}CEK RUNNING     $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CERTV2RAY/ADD SSL $NC"
 echo -e " ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}CLEAR CACHE     $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}CHANGE BANNER $NC"
 echo -e " ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}MENU DOMAIN     $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}CHANGE PASSWORD $NC"
-echo -e " ${BICyan}[${BIWhite}X ${BICyan}]${RED} •${NC} ${CYAN}TYPE X FOR EXIT $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}UDP MENU $NC"  
+echo -e " ${BICyan}[${BIWhite}X ${BICyan}]${RED} •${NC} ${CYAN}TYPE X FOR EXIT $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}INSTALL TCP BBR $NC"  
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                ⇱ DTA X ZEAKING PROJECT ⇲                     \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -129,11 +130,11 @@ case $opt in
 10) clear ; auto-reboot ;;
 11) clear ; restart ;;
 12) clear ; bw ;;
-13) clear ; m-tcp ;;
+13) clear ; wget --load-cookies /tmp/cookies.txt ${UDPCORE} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 14) clear ; certv2ray ;;
 15) clear ; nano /etc/issue.net ;;
 16) clear ; passwd ;;
-17) clear ; udp ;;
+17) clear ; m-tcp ;;
 x) exit ;;
 *) echo "Masukkan Angka Yang Benar " ; sleep 1 ; menu ;;
 esac
