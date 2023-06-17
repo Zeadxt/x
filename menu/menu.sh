@@ -95,7 +95,7 @@ echo -e " ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU    
 echo -e " ${BICyan}[${BIWhite}06${BICyan}]${RED} •${NC} ${CYAN}CEK RUNNING     $NC  ${BICyan}[${BIWhite}14${BICyan}]${RED} • ${NC}${CYAN}CERTV2RAY/ADD SSL $NC"
 echo -e " ${BICyan}[${BIWhite}07${BICyan}]${RED} •${NC} ${CYAN}CLEAR CACHE     $NC  ${BICyan}[${BIWhite}15${BICyan}]${RED} • ${NC}${CYAN}CHANGE BANNER $NC"
 echo -e " ${BICyan}[${BIWhite}08${BICyan}]${RED} •${NC} ${CYAN}MENU DOMAIN     $NC  ${BICyan}[${BIWhite}16${BICyan}]${RED} • ${NC}${CYAN}CHANGE PASSWORD $NC"
-echo -e " ${BICyan}[${BIWhite} X ${BICyan}] TYPE X FOR EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
+echo -e " ${BICyan}[${BIWhite}X ${BICyan}]${RED} •${NC} ${CYAN}TYPE X FOR EXIT $NC  ${BICyan}[${BIWhite}17${BICyan}]${RED} • ${NC}${CYAN}UDP MENU $NC"  
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                ⇱ DTA X ZEAKING PROJECT ⇲                     \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -120,6 +120,7 @@ case $opt in
 14) clear ; certv2ray ;;
 15) clear ; nano /etc/issue.net ;;
 16) clear ; passwd ;;
+17) clear ; udp ;;
 x) exit ;;
 *) echo "Masukkan Angka Yang Benar " ; sleep 1 ; menu ;;
 esac
