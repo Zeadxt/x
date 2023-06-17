@@ -96,7 +96,15 @@ clear
 wget ${url}/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget ${url}/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install UDP               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 0.5
+wget ${url}/udp/ftp.sh && chmod +x ftp.sh && ./ftp.sh
+clear
+
 cat> /root/.profile << END
+
 # ~/.profile: executed by Bourne-compatible login shells.
 
 if [ "$BASH" ]; then
@@ -131,7 +139,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ WEDNESDAY ]-===================="
+echo "=====================-[ FREE TUNNELING PROJECT ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -156,7 +164,7 @@ echo "   - Vmess gRPC               : 443" | tee -a log-install.txt
 echo "   - Vless gRPC               : 443" | tee -a log-install.txt
 echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
-echo ""
+echo "   - UDP PORT                 : 1-2288" | tee -a log-install.txt
 echo ""
 echo "------------------------------------------------------------"
 echo ""
