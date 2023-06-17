@@ -96,12 +96,6 @@ clear
 wget ${url}/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget ${url}/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install UDP               $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 0.5
-wget ${url}/udp/ftp.sh && chmod +x ftp.sh && ./ftp.sh
-clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
