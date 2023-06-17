@@ -102,9 +102,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 0.5
 wget ${url}/udp/ftp.sh && chmod +x ftp.sh && ./ftp.sh
 clear
-
 cat> /root/.profile << END
-
 # ~/.profile: executed by Bourne-compatible login shells.
 
 if [ "$BASH" ]; then
@@ -139,7 +137,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ FREE TUNNELING PROJECT ]-===================="
+echo "=====================-[ WEDNESDAY ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -164,7 +162,7 @@ echo "   - Vmess gRPC               : 443" | tee -a log-install.txt
 echo "   - Vless gRPC               : 443" | tee -a log-install.txt
 echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
-echo "   - UDP PORT                 : 1-2288" | tee -a log-install.txt
+echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
