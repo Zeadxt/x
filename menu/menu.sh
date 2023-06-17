@@ -23,6 +23,7 @@ IBlue='\033[0;94m'        # Blue
 IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
+Yellow='\033[0;93'
 NC='\e[0m'
 # // Export Color & Information
 export RED='\033[0;31m'
@@ -85,7 +86,7 @@ let ssa=$ssx/2
 
 clear 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                    ⇱ SERVER INFORMATION ⇲                     \E[0m"
+echo -e "\E[44;1;39m                    ⇱ SERVER INFORMATION ⇲                    \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${BICyan} ⇲  ${BICyan}SCRIPT BY       :  ${Yellow}FREE TUNNELING PROJECT${NC}"    
 echo -e "${BICyan} ⇲  ${BICyan}Current Domain  :  ${Yellow}$domain${NC}" 
@@ -93,9 +94,9 @@ echo -e "${BICyan} ⇲  ${BICyan}IP-VPS          :  ${Yellow}$IPVPS${NC}"
 echo -e "${BICyan} ⇲  ${BICyan}ISP-VPS         :  ${Yellow}$ISP${NC}"
 echo -e "${BICyan} ⇲  ${BICyan}DATE&TIME       :  ${Yellow}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}" 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                         ⇱ RUNNING ⇲                           \E[0m"
+echo -e "\E[44;1;39m                         ⇱ RUNNING ⇲                          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "          ${green}Today : ${ttoday}                  month : ${tmon} ${NC}"
+echo -e "        ${green}Today : ${ttoday}                  month : ${tmon} ${NC}"
 echo -e "${BICyan}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC ${BICyan} │"
 echo -e "${BICyan}│  \033[0m ${BICyan} $ssh1        $vma           $vla          $tra              $ssa   $NC    ${BICyan} │"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
