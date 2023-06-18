@@ -96,6 +96,16 @@ clear
 wget ${url}/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget ${url}/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
+
+# > Buat swap sebesar 1G
+    dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+    mkswap /swapfile
+    chown root:root /swapfile
+    chmod 0600 /swapfile >/dev/null 2>&1
+    swapon /swapfile >/dev/null 2>&1
+    sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
+
+clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
